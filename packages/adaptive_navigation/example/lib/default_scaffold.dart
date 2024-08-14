@@ -1,5 +1,7 @@
 import 'package:adaptive_navigation/adaptive_navigation.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(const MaterialApp(home: DefaultScaffoldDemo()));
@@ -13,7 +15,7 @@ class DefaultScaffoldDemo extends StatefulWidget {
 }
 
 class DefaultScaffoldDemoState extends State<DefaultScaffoldDemo> {
-  int _destinationCount = 5;
+  int _destinationCount = 9;
   bool _fabInRail = false;
   bool _includeBaseDestinationsInMenu = true;
 
@@ -42,7 +44,15 @@ class DefaultScaffoldDemoState extends State<DefaultScaffoldDemo> {
           This is the default behavior of the AdaptiveNavigationScaffold.
           It switches between bottom navigation, navigation rail, and a permanent drawer.
           Resize the window to switch between the navigation types.
-          '''),
+          00000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000
+          ''',
+          style: TextStyle(
+            fontSize: 15,
+            fontStyle:FontStyle.normal,
+            backgroundColor: Color.fromARGB(249, 156, 156, 18)
+          ),),
           const SizedBox(height: 40),
           Slider(
             min: 2,
